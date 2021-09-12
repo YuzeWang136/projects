@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}The chat room has been deleted by the creater{% endblock %}
+{% block body %}
+    {{ super() }}
+    <div><a href="{{ url_for('homepage') }}">click here to return to to homepage</a></div>
+{% endblock %}

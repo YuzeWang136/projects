@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}
+    chatRoom {{ name }}
+    <script type="text/javascript" src="{{ url_for('static', filename='chatRoom.js') }}"></script>
+{% endblock %}
+{{ super() }}
+{% block body %}
+    {{ super() }}
+    <div><a href="{{ url_for('exit') }}">exit</a></div>
+    {% for content in history %}
+        {{ content }}
+        <br />
+    {% endfor %}
+    <p id="newMessage"> </p>
+    <form name="theForm">
+        <input type="text" id="content" name="content" value="" />
+        <input type="button" id="theButton" value="enter" />
+    </form>
+{% endblock %}
