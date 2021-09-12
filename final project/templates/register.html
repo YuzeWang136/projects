@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Sign up! {% endblock %}
+{% block body %}
+    <a href="{{ url_for('login') }}">sign in</a>
+    <form action="" method="post">
+        <div> Username: <input type="text" name="username" size="24" /> </div>
+        <div> Password: <input type="text" name="password" size="80"/> </div>
+        <div> repeat-Password:  <input type="text" name="password2" size="80"/> </div>
+        <div class="actions"> <input type="submit" value="submit" /></div>
+    </form>
+    {% if error is not none %}
+    <strong>{{ error }}</strong>
+    {% endif %}
+{% endblock %}

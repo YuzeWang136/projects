@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Homepage {% endblock %}
+{% block body %}
+    <form action="" method="post">
+        <a href="{{ url_for('logout') }}">logout</a>
+        <div> chat room name: <input type="text" name="roomname" size="24" /> </div>
+        <div class="actions"> <input type="submit" value="submit" /></div>
+        {% if error is not none %}
+         <strong>{{ error }}</strong>
+        {% endif %}
+    </form>
+{% endblock %}
