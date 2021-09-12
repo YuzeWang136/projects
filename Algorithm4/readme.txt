@@ -1,0 +1,1 @@
+LCS.java can complete all tasks in Project4 quickly
